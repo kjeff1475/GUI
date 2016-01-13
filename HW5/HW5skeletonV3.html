@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<!--
+ Homework 5.
+ HTML code.
+
+ author Kyle Jeffries
+ version 3
+-->
+
+<html>
+
+<head>
+  <title>HW5: skeleton code version 2</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" href="HW5skeletonV3.css">
+  <script src ="HW5skeletonV3.js"></script>
+  <script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec3 vertexPosition;
+    void main(void) {
+      gl_Position = vec4(vertexPosition, 1.0);
+    }
+  </script>
+  <script id="fragment-shader" type="x-shader/x-fragment">
+    void main(void) {
+      gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+    }
+  </script>
+</head>
+
+<body>
+
+<nav id="menubar">
+  <ul>
+    <li>File
+      <ul>
+        <li><a href="javascript:open()">Open</a></li>
+        <li><a href="javascript:close()">Close</a></li>
+        <li><a href="javascript:save()">Save</a></li>
+        <li><a href="javascript:quit()">Quit</a></li>
+      </ul>
+    </li>
+    <li>Edit
+      <ul>
+        <li><a href="javascript:copy()">Copy</a></li>
+        <li><a href="javascript:paste()">Paste</a></li>
+      </ul>
+    </li>
+    <li>Help
+      <ul>
+        <li><a href="javascript:about()">About</a></li>
+      </ul>
+    </li>         
+  </ul>
+</nav>
+
+<section id="content">
+  <div id="tableholder"> 
+  </div> 
+  <div id="canvasholder">
+    <div id = "chart">
+    <div id="toolbar">
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select>
+      <input id="bgcolor" type="color">
+       <input id="fgcolor" type="color">
+      <input id="secolor" type="color">
+   </div>
+    <canvas id="canvas" oncontextmenu="return false;">
+ Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    </canvas>
+  </div>
+  </div>
+</section>
+
+<input style="display:none;" id="fileDialog" type="file" />
+
+</body>
+
+</html>

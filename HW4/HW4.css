@@ -1,0 +1,17 @@
+.chart {
+    -fx-background-color: white;
+
+    -fx-bar-gap: 0;
+
+    -fx-category-gap: 0;
+
+    -fx-horizontal-grid-lines-visible: false;
+    -fx-vertical-grid-lines-visible: false;
+    -fx-alternative-column-fill-visible: false;
+    -fx-alternative-row-fill-visible: false;
+    -fx-legend-visible: false;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
